@@ -46,39 +46,16 @@ WHERE length(orderid) = 6
 AND orderid <> 'Order ID'
 
 #4. Which product was the cheapest one sold in January, and what was the price?
-# THERE ARE MULTIPLE CORRECT ANSWERS LISTED BELOW 
 
-###### QUESTION 4 ANSWER #1 ######
 SELECT distinct Product, price
 FROM BIT_DB.JanSales
 WHERE  price in (SELECT min(price) FROM BIT_DB.JanSales)
-
-####### QUESTION 4 ANSWER #2 ######
-SELECT distinct product, price 
-FROM BIT_DB.JanSales 
-ORDER BY price ASC LIMIT 1
-
-####### QUESTION 4 ANSWER #3 ######
-SELECT distinct product, MIN(price) 
-FROM BIT_DB.JanSales Jan 
-GROUP BY product, price 
-ORDER BY price ASC LIMIT 1
-#PLEASE NOTE: Did do use Option 3, but forgot the GROUP BY?
-#If so, please see the Question 4 notes below the Answers section for an explanation.
-
-#######  QUESTION 4 ANSWER #4 ######
-SELECT product, min(price) 
-FROM BIT_DB.JanSales Jan 
-GROUP BY product, price 
-ORDER BY price ASC
-LIMIT 1
 
 #5. What is the total revenue for each product sold in January?
 SELECT sum(quantity)*price as revenue
 ,product
 FROM BIT_DB.JanSales
 GROUP BY product
-#PLEASE NOTE: Are you unsure why we use sum(quantity)*price here? See Question 5 notes below the answer section for an explanation.
 
 #6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
 select 
