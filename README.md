@@ -76,3 +76,34 @@ ON FEB.orderid=cust.order_id
 WHERE Feb.Quantity>2
 AND length(orderid) = 6 
 AND orderid <> 'Order ID'
+
+
+Here I made tables of the "Lords and Ladies of Middle Earth":
+
+CREATE TABLE Lords_of_Middle_Earth (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, race TEXT, skill TEXT);
+
+INSERT INTO Lords_of_Middle_Earth VALUES (1, "Elrond", 8000, "elf", "Councler");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(2, "Aragorn", 100, "dúnedain", "king");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(3, "Samwise", 30, "hobbit", "gardner");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(4, "Farimir", 50, "human", "duke");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(5, "Gimli", 60, "dwarf", "soldier");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(6, "Gandalf", 8000, "maiar", "wizard");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(7, "Legolas", 3000, "elf", "archer");
+INSERT INTO Lords_of_Middle_Earth VALUES
+(8, "Pippin", 30, "hobbit", "gaurd");
+
+
+CREATE TABLE Ladies_of_Middle_Earth (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, race TEXT, skill TEXT);
+
+INSERT INTO Ladies_of_Middle_Earth VALUES
+(1, "Arwen", 2700, "elf", "queen");
+INSERT INTO Ladies_of_Middle_Earth VALUES
+(2, "Eowyn", 40, "human", "dutchess");
+INSERT INTO Ladies_of_Middle_Earth VALUES
+(3, "Galadriel", 8000, "elf", "queen");
