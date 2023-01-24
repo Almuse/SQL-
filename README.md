@@ -77,6 +77,11 @@ WHERE Feb.Quantity>2
 AND length(orderid) = 6 
 AND orderid <> 'Order ID'
 
+#8 List all products sold in Los Angeles, and include how many of each were sold. 
+SELECT distinct Product, sum(quantity)
+FROM BIT_DB.FebSales
+WHERE location like '%Los Angeles%'
+GROUP BY Product;
 
 Here I made tables of the "Lords and Ladies of Middle Earth":
 
